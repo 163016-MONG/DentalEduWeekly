@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>牙醫學教育研究新知週報｜2026/06/21–06/27</title>
+  <style>
+    :root {
+      --primary: #1a4b7c;
+      --accent: #2e7fc1;
+      --light-bg: #f4f8fd;
+      --card-bg: #ffffff;
+      --tag-ai: #e8f4e8;
+      --tag-ai-text: #2d6a4f;
+      --tag-sim: #fff3e0;
+      --tag-sim-text: #b45309;
+      --tag-curr: #ede7f6;
+      --tag-curr-text: #5b21b6;
+      --tag-well: #fce4ec;
+      --tag-well-text: #9b1c3a;
+      --tag-policy: #e3f2fd;
+      --tag-policy-text: #1565c0;
+      --border: #dde6f0;
+      --muted: #6b7a8d;
+      --text: #1e2a3a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans TC', 'Segoe UI', system-ui, sans-serif;
+      background: var(--light-bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1a4b7c 0%, #2e7fc1 100%);
+      color: #fff;
+      padding: 40px 32px 32px;
+      text-align: center;
+    }
+    header .kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.75;
+      margin-bottom: 8px;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    header .subtitle {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+    header .meta {
+      margin-top: 18px;
+      display: inline-flex;
+      gap: 24px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 32px;
+      padding: 8px 24px;
+      font-size: 0.82rem;
+    }
+
+    /* ── TOC ── */
+    .toc-section {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 20px 32px;
+    }
+    .toc-section h2 {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .toc-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      list-style: none;
+    }
+    .toc-list li a {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.84rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.15s;
+    }
+    .toc-list li a:hover { opacity: 0.75; }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 24px 60px;
+    }
+
+    /* ── Section heading ── */
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+    }
+    .section-heading .icon {
+      font-size: 1.4rem;
+    }
+    .section-heading h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .section-heading .count {
+      margin-left: auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ── Article card ── */
+    .article-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .article-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 2px 10px rgba(46,127,193,0.1);
+    }
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .tag {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .tag-ai     { background: var(--tag-ai);     color: var(--tag-ai-text); }
+    .tag-sim    { background: var(--tag-sim);    color: var(--tag-sim-text); }
+    .tag-curr   { background: var(--tag-curr);   color: var(--tag-curr-text); }
+    .tag-well   { background: var(--tag-well);   color: var(--tag-well-text); }
+    .tag-policy { background: var(--tag-policy); color: var(--tag-policy-text); }
+
+    .article-journal {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .article-date {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-left: auto;
+    }
+    .article-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      line-height: 1.45;
+    }
+    .article-card h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .article-card h3 a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    .article-card .authors {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .article-card .summary-title {
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .article-card .summary {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #2e3f52;
+    }
+    .article-card .summary p { margin-bottom: 8px; }
+    .article-card .summary p:last-child { margin-bottom: 0; }
+
+    /* ── Reference section ── */
+    .ref-section {
+      margin-top: 50px;
+      padding: 28px 28px;
+      background: #f0f5fb;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .ref-section h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .ref-list {
+      list-style: none;
+      counter-reset: ref-counter;
+    }
+    .ref-list li {
+      counter-increment: ref-counter;
+      font-size: 0.83rem;
+      line-height: 1.7;
+      color: #3a4a5a;
+      padding: 8px 0 8px 32px;
+      position: relative;
+      border-bottom: 1px dashed #d0dce8;
+    }
+    .ref-list li:last-child { border-bottom: none; }
+    .ref-list li::before {
+      content: counter(ref-counter) ".";
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .ref-list li a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .ref-list li a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+      padding: 28px 24px;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.4rem; }
+      .article-date { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header>
+  <div class="kicker">牙醫學教育研究</div>
+  <h1>新知週報</h1>
+  <div class="subtitle">PubMed 精選文獻導讀</div>
+  <div class="meta">
+    <span>📅 涵蓋期間：2026/06/21 – 06/27</span>
+    <span>📄 精選 14 篇</span>
+    <span>🔬 資料來源：PubMed</span>
+  </div>
+</header>
+
+<!-- ═══════════════ TOC ═══════════════ -->
+<div class="toc-section">
+  <h2>本期主題</h2>
+  <ul class="toc-list">
+    <li><a href="#ai" style="background:#e8f4e8;color:#2d6a4f;">🤖 AI 與牙醫教育（5篇）</a></li>
+    <li><a href="#sim" style="background:#fff3e0;color:#b45309;">🦷 模擬訓練與數位科技（3篇）</a></li>
+    <li><a href="#curriculum" style="background:#ede7f6;color:#5b21b6;">📚 課程、評量與教學（3篇）</a></li>
+    <li><a href="#wellbeing" style="background:#fce4ec;color:#9b1c3a;">🧠 學生身心與職業發展（3篇）</a></li>
+  </ul>
+</div>
+
+<main>
+
+<!-- ═══════════════ SECTION 1: AI ═══════════════ -->
+<div class="section-heading" id="ai">
+  <span class="icon">🤖</span>
+  <h2>AI 與牙醫教育</h2>
+  <span class="count">5 篇</span>
+</div>
+
+<!-- Card 1 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-ai">AI 評估</span>
+    <span class="article-journal">BMC Oral Health</span>
+    <span class="article-date">2026-06-26</span>
+  </div>
+  <h3><a href="https://doi.org/10.1186/s12903-026-09032-9" target="_blank">
+    各大 AI 模型在口腔顎面放射及外科考題中的準確度比較
+  </a></h3>
+  <div class="authors">Samunahmetoglu E, Yilmaz A.（Yozgat Bozok University &amp; Gazi University, Türkiye）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本研究以土耳其牙醫專科考試（DUS）2012–2021 年間的 258 道選擇題（含 202 題知識型、56 題分析型）為素材，比較 ChatGPT-5.2 Go、ChatGPT-5.2 Plus、DeepSeek V3、<strong>Claude Sonnet 4.5</strong> 及 Gemini 3 Flash 五款 AI 的表現。</p>
+    <p>結果顯示各模型在整體準確度（p = 0.006）、知識型題目（p = 0.048）及分析型題目（p = 0.032）均存在顯著差異。Gemini 在知識型題目表現最佳；分析型題目則未見明顯模型優勢。模型間一致性偏低（κ = 0.226–0.339），但組內相關係數尚可（ICC = 0.597–0.728）。</p>
+    <p><strong>教育意涵：</strong>現有 AI 模型具備良好事實記憶能力，但臨床分析推理仍受限，可作為牙醫教育輔助工具，尚不適合用於獨立的臨床決策。</p>
+  </div>
+</div>
+
+<!-- Card 2 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-ai">AI 形成性評量</span>
+    <span class="article-journal">Journal of Dental Education</span>
+    <span class="article-date">2026-06-25</span>
+  </div>
+  <h3><a href="https://doi.org/10.1002/jdd.70304" target="_blank">
+    AI 生成回饋對牙科學生技工訓練成效的影響：以贋復前臨床課程為例
+  </a></h3>
+  <div class="authors">Benli M.（University of Florida, USA）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本隨機分組研究（n = 56）比較 AI 自動回饋系統與傳統師生回饋對第三年學生牙冠預備的影響。AI 系統透過 3D 彩色熱圖、數值分數及文字評語，針對咬合面/軸面磨切量、方向、邊緣線品質、表面平整度及倒凹五項參數提供即時回饋。</p>
+    <p>高度使用 AI（≥5 次）的學生期末考均分顯著高於低使用者（87.2 vs 80.6，p = 0.011），標記錯誤改善率亦更大（27.8% vs 9.6%）。84% 學生認為 AI 回饋有幫助，76% 感受到技能進步；69% 偏好 AI + 師資混合回饋模式。兩組在學業倦怠（SBI-9）上無顯著差異。</p>
+    <p><strong>教育意涵：</strong>AI 形成性回饋可提升學生的自我調整學習能力，並在不增加學業壓力的前提下改善技工訓練成效，適合作為傳統教學的補充工具。</p>
+  </div>
+</div>
+
+<!-- Card 3 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-ai">LLM 評估</span>
+    <span class="article-journal">Journal of Dentistry</span>
+    <span class="article-date">2026-06-24</span>
+  </div>
+  <h3><a href="https://doi.org/10.1016/j.jdent.2026.106853" target="_blank">
+    六款主流大型語言模型回答牙科開放式病例問題的多維評估
+  </a></h3>
+  <div class="authors">Zhang H, Yan X, Yang Y, Jin L et al.（The University of Hong Kong）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本研究以 34 組標準化縱向牙周病例描述（共 258 組問答對）評估 GPT、Gemini、Copilot、DeepSeek、Llama、MedGemma 六款 LLM，採用自動化指標（忠實度、答案相關性、可讀性）搭配盲法專家 Likert 評分。</p>
+    <p>DeepSeek 在專家評分最高（中位數 4.5/5），優於 GPT 與 Gemini（均 4.0/5）及 MedGemma（3.75/5）、Llama（3.5/5）。各模型存在不同取捨：Copilot 可讀性高但準確度較低；Gemini 相關性較差；Llama 可讀性最弱。</p>
+    <p><strong>教育意涵：</strong>為牙科教育或決策支援選用 AI 工具時，應深入了解各模型強弱項，而非僅憑品牌熟悉度作選擇。</p>
+  </div>
+</div>
+
+<!-- Card 4 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-ai">AI 軟體開發</span>
+    <span class="article-journal">Journal of Dentistry</span>
+    <span class="article-date">2026-06-26</span>
+  </div>
+  <h3><a href="https://doi.org/10.1016/j.jdent.2026.106864" target="_blank">
+    AI 輔助軟體開發在數位牙科的應用：三款開源應用程式開發實例報告
+  </a></h3>
+  <div class="authors">Reymus M, Tichy A, Diegritz C et al.（LMU Munich, Germany）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本技術創新報告描述由一位<strong>無程式設計訓練背景的牙科臨床醫師</strong>，透過 AI 輔助開發出三款開源應用程式：(1) <em>VirtualEndo Converter</em>（Blender 插件，自動將 CBCT 衍生的 STL 轉換為 AR/VR 格式）；(2) <em>MeshComparisonTool</em>（3D Slicer 擴充套件，定量比較 3D 形貌）；(3) <em>DentalEmergencyTrainer</em>（模擬牙齒外傷緊急電話的訓練應用程式）。</p>
+    <p>AI 輔助開發方式包含聊天式介面、命令列工具、具 AI 整合的 IDE，以及代理型架構，所有程式均以 MIT 授權公開於 GitHub。</p>
+    <p><strong>教育意涵：</strong>AI 輔助開發可使非工程背景的牙科教師創建教育工具；但正式臨床部署前，仍需嚴謹的驗證、安全審查與法規評估。</p>
+  </div>
+</div>
+
+<!-- Card 5 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-ai">AI 倫理</span>
+    <span class="article-journal">International Journal of Medical Informatics</span>
+    <span class="article-date">2026-06-27</span>
+  </div>
+  <h3><a href="https://doi.org/10.1016/j.ijmedinf.2026.106576" target="_blank">
+    牙科與醫學 AI 中的知情同意與倫理考量：範疇性文獻回顧
+  </a></h3>
+  <div class="authors">Allende AB, Ehsani SS, Eber P et al.</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本範疇性回顧探討 AI 在臨床部署、模型開發及次級資料使用情境下，知情同意（IC）的角色與實踐現況。研究發現：IC 的論證方式與執行標準仍缺乏一致性，在資料治理、利害關係人參與及 AI 功能類型等面向均存在缺口。</p>
+    <p>作者提出「溝通門檻」概念，區分通知型（notification）、例行同意型（routine consent）與強化同意型（enhanced consent）三種層次，供不同 AI 應用場景參考。</p>
+    <p><strong>教育意涵：</strong>在牙科教育中引入 AI 工具時，教師與機構需建立清晰的倫理框架，包括病患資料使用、學生績效數據的蒐集與告知等，方能符合倫理規範。</p>
+  </div>
+</div>
+
+<!-- ═══════════════ SECTION 2: SIMULATION ═══════════════ -->
+<div class="section-heading" id="sim">
+  <span class="icon">🦷</span>
+  <h2>模擬訓練與數位科技</h2>
+  <span class="count">3 篇</span>
+</div>
+
+<!-- Card 6 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-sim">混合實境</span>
+    <span class="article-journal">Journal of Dental Education</span>
+    <span class="article-date">2026-06-25</span>
+  </div>
+  <h3><a href="https://doi.org/10.1002/jdd.70302" target="_blank">
+    混合實境模擬器與 3D 列印模型在第三大臼齒拔除訓練的比較研究
+  </a></h3>
+  <div class="authors">Bjelovucic R, de Freitas BN, Nørholt SE et al.（Aarhus University, Denmark）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本隨機交叉研究（n = 20 名大學部學生）比較混合實境（MR）模擬器與 3D 列印塑膠模型在智齒拔除訓練上的成效與學生感受。MR 組在組內分析中呈現顯著的骨移除量學習曲線（β = -33.29 mm，p = 0.0016），塑膠模型組則無此效果。MR 模擬器的舌側骨穿孔率較高（OR = 5.72，p = 0.007），提示不同模式在錯誤類型上有所差異。</p>
+    <p>學生對 MR 模擬器的評分高（真實感/可用性：6.40/7；學習效能感：6.23/7）。任務完成時間兩組無顯著差異。</p>
+    <p><strong>教育意涵：</strong>MR 提供高沉浸感與標準化的重複訓練環境；3D 列印模型則保留觸覺回饋。兩者各有優劣，建議作為互補的教學工具，而非相互取代。</p>
+  </div>
+</div>
+
+<!-- Card 7 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-sim">3D 列印</span>
+    <span class="article-journal">European Journal of Dental Education</span>
+    <span class="article-date">2026-06-23</span>
+  </div>
+  <h3><a href="https://doi.org/10.1111/eje.70200" target="_blank">
+    以 3D 列印模型改善早期執業牙醫的根分叉穿孔修補能力：模擬訓練品質改善計畫
+  </a></h3>
+  <div class="authors">Quinn BM, Colloc TNE, Kilgariff JK.（Dundee Dental Hospital / NHS Education for Scotland, UK）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本品質改善計畫針對兩梯次牙科核心訓練生（dental core trainees）設計半天課程，結合根分叉穿孔的理論教學（成因、預後、處置）與 3D 列印牙齒上的實作，搭配液壓矽酸鈣基底材（hydraulic calcium silicate cement）及放大工具進行修補練習。</p>
+    <p>前後問卷顯示：訓練後學員對於處置根分叉穿孔的信心與自評勝任感均顯著提升。學員認為 3D 列印牙提供了真實且可控的練習環境。</p>
+    <p><strong>教育意涵：</strong>針對低頻率但高難度的臨床術式，以 3D 列印模型搭配放大工具進行模擬教學，可有效填補早期執業牙醫的技能缺口。</p>
+  </div>
+</div>
+
+<!-- Card 8 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-sim">數位牙科</span>
+    <span class="article-journal">International Journal of Computerized Dentistry</span>
+    <span class="article-date">2026-06-25</span>
+  </div>
+  <h3><a href="https://doi.org/10.3290/j.ijcd.b7040930" target="_blank">
+    芬蘭牙科學生對椅旁數位工作流程的學習經驗與看法：全國性問卷調查
+  </a></h3>
+  <div class="authors">Orhanen K, Salmenkivi S, Mutluay MM.（Finland）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本研究透過問卷調查芬蘭所有牙醫學院的四、五年級學生（n = 76，回覆率 24.4%），了解椅旁 CAD/CAM 系統（主要為 Cerec、Planscan）的使用與教學現況。多數學生（56.9%–70.8%）已有嵌入體、覆蓋體及全瓷冠的操作經驗，但 73.7% 對臨前教學及 75.3% 對臨床教學的教授深度感到不滿意；儘管如此，78.9% 仍自認有足夠信心使用數位工作流程。</p>
+    <p><strong>教育意涵：</strong>數位牙科技術已廣泛納入本科課程，但課程結構化程度與師資專業度仍有提升空間，學生的技術信心可能超前於系統性的教學深度。</p>
+  </div>
+</div>
+
+<!-- ═══════════════ SECTION 3: CURRICULUM ═══════════════ -->
+<div class="section-heading" id="curriculum">
+  <span class="icon">📚</span>
+  <h2>課程、評量與教學</h2>
+  <span class="count">3 篇</span>
+</div>
+
+<!-- Card 9 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-curr">評量</span>
+    <span class="article-journal">BMC Medical Education</span>
+    <span class="article-date">2026-06-24</span>
+  </div>
+  <h3><a href="https://doi.org/10.1186/s12909-026-09791-7" target="_blank">
+    牙醫教育中 EMQ、MCQ 與 SAQ 的試題分析與學生對 EMQ 的感受
+  </a></h3>
+  <div class="authors">Karamdokht P, Babaee Hemmati Y, Dadgaran I, Falahchai M.（Guilan University of Medical Sciences, Iran）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本橫斷面研究以 29 名高年級牙醫學生為對象，分析四門課程期末考中 15 題 EMQ（延伸配對題）、45 題 MCQ（單選題）及 30 題 SAQ（簡答題）的心測特性，並評估學生對 EMQ 的感受。</p>
+    <p>EMQ 難度顯著高於 MCQ 及 SAQ（p &lt; 0.001）；三種題型的辨別度無顯著差異；MCQ 的干擾項效率（distractor efficiency）最高（p = 0.014）。學生在 SAQ 的得分最高，EMQ 的平均感受分數屬中等（44.80/75），且不受性別或 GPA 影響，但因課程而異。感受分數與 EMQ 表現無顯著相關（p = 0.211）。</p>
+    <p><strong>教育意涵：</strong>EMQ 能測驗更複雜的臨床推理，但學生不熟悉此格式會影響表現；建議加強 EMQ 的說明教學，作為臨床推理能力評量的工具。</p>
+  </div>
+</div>
+
+<!-- Card 10 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-curr">課程設計</span>
+    <span class="article-journal">BMC Medical Education</span>
+    <span class="article-date">2026-06-24</span>
+  </div>
+  <h3><a href="https://doi.org/10.1186/s12909-026-09772-w" target="_blank">
+    跨越鴻溝：牙醫教育中學生與師資對教學、學習及評量的看法
+  </a></h3>
+  <div class="authors">Marinova-Takorova M, Mihaylova Z.（Medical University Sofia, Bulgaria）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本研究針對保加利亞醫科大學牙醫學院的保加利亞學生（n = 397）、國際學生（n = 122）及教師（n = 57）進行問卷調查，探討課程目標、評量方式、個別化教學支持及出席動機的跨群體認知差異。</p>
+    <p>超過半數學生表示未獲得個別化教學支持，與教師的認知相反。保加利亞學生較偏好口試，國際學生偏好實作與筆試，教師則偏好筆試。多數學生認可課程目標與評量方式的對應程度為中高等。</p>
+    <p><strong>教育意涵：</strong>師生認知落差在多語言牙醫教育環境中尤為明顯，強調透過定期溝通與個別化支持提升課程設計品質的必要性。</p>
+  </div>
+</div>
+
+<!-- Card 11 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-curr">EPA 框架</span>
+    <span class="article-journal">European Journal of Dental Education</span>
+    <span class="article-date">2026-06-23</span>
+  </div>
+  <h3><a href="https://doi.org/10.1111/eje.70221" target="_blank">
+    以可信賴專業活動（EPA）框架進行兒童牙科教師校準：本科課程的應用與評估
+  </a></h3>
+  <div class="authors">Lee JY, Vann WF, Simancas-Pallares MA.（University of North Carolina at Chapel Hill, USA）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本研究針對兒童牙科科系 10 位教師及 6 位研究生教學助理進行 EPA 框架下的校準計畫，涵蓋口腔檢查、診斷與風險評估、溝封及不鏽鋼冠四項 EPA，使用「授權程度（procedural skills &amp; independence）」評分系統，進行診斷性問卷及四次校準課程。</p>
+    <p>校準後各課程的評分一致性大幅提升（23% → 100%），threshold effect 亦顯著改善（55% → 100%）；pooled weighted Kappa 達 0.8–1.0，顯示高可靠性。</p>
+    <p><strong>教育意涵：</strong>EPA 框架下的系統性教師校準可有效提升臨床評量的一致性；在新評量框架導入初期，教師間系統性校準計畫不可或缺。</p>
+  </div>
+</div>
+
+<!-- ═══════════════ SECTION 4: WELLBEING ═══════════════ -->
+<div class="section-heading" id="wellbeing">
+  <span class="icon">🧠</span>
+  <h2>學生身心健康與職業發展</h2>
+  <span class="count">3 篇</span>
+</div>
+
+<!-- Card 12 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-well">心理健康</span>
+    <span class="article-journal">BMC Medical Education</span>
+    <span class="article-date">2026-06-26</span>
+  </div>
+  <h3><a href="https://doi.org/10.1186/s12909-026-09736-0" target="_blank">
+    牙醫專科訓練生的壓力、焦慮與憂鬱：橫斷面研究
+  </a></h3>
+  <div class="authors">Islamzade B, Leblebicioglu Kurtulus I, Durmaz Yilmaz OM.（Erciyes University &amp; Nigde Ömer Halisdemir University, Türkiye）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本研究以 DASS-21 量表調查 192 名牙醫專科訓練生的心理健康狀況。結果顯示壓力（β = 0.543）與焦慮（β = 0.317）為憂鬱的顯著預測因子，合計解釋 69.6% 的變異。多數受試者分數在正常範圍內，訓練年資、專科別、居住狀況及吸菸習慣均未達顯著差異；財務狀況「普通」者的困擾分數有偏高趨勢，但未達統計顯著。</p>
+    <p><strong>教育意涵：</strong>壓力、焦慮與憂鬱在牙醫專科訓練階段緊密相關，建議課程設計納入心理支持機制，尤其關注財務壓力等個人層面因素。</p>
+  </div>
+</div>
+
+<!-- Card 13 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-well">人才外流</span>
+    <span class="article-journal">BMC Medical Education</span>
+    <span class="article-date">2026-06-24</span>
+  </div>
+  <h3><a href="https://doi.org/10.1186/s12909-026-09695-6" target="_blank">
+    土耳其牙醫學生的人才外流意願與生活滿意度的多維分析
+  </a></h3>
+  <div class="authors">Karaaslan F, Kavak İ.（Uşak University, Türkiye）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本全國性橫斷面研究調查 935 名土耳其牙醫學生，以「人才外流態度量表（ASBD）」及「生活滿意度量表（LSS）」評估出國執業意願及其相關因素。</p>
+    <p>61.9% 的學生表達畢業後赴海外執業的意願，70.9% 獲得家人支持，67.1% 期望未來回國。經濟生活滿意度與外流態度的相關性最強（ρ = -0.291，p &lt; 0.001）。分層迴歸分析中，生活總滿意度（β = -0.248）、學習年資、年齡及母親教育程度均為顯著預測因子。</p>
+    <p><strong>教育意涵：</strong>人才外流不僅是個人選擇，更與系統性因素（薪資、職涯發展、家庭背景）密切相關；政策制訂者與學校應正視並積極回應影響牙醫人才留任的結構性問題。</p>
+  </div>
+</div>
+
+<!-- Card 14 -->
+<div class="article-card">
+  <div class="article-meta">
+    <span class="tag tag-well">病患安全</span>
+    <span class="article-journal">Journal of Dental Education</span>
+    <span class="article-date">2026-06-23</span>
+  </div>
+  <h3><a href="https://doi.org/10.1002/jdd.70292" target="_blank">
+    海灣合作理事會地區牙醫學生提出疑慮的信心與障礙：多中心調查
+  </a></h3>
+  <div class="authors">Matoug-Elwerfelli M, Hassouneh L, Ali K et al.（Qatar University, Jordan University of Science &amp; Technology, UAE）</div>
+  <div class="summary-title">導讀</div>
+  <div class="summary">
+    <p>本多中心橫斷面研究調查卡達、阿聯酋、沙烏地阿拉伯五所牙醫學院 363 名學生，評估其對提出臨床或人際疑慮的信心及障礙。31.4% 的學生曾遭遇需提出疑慮的情況。在感染控制等病患安全議題上，學生的信心高於處理人際衝突問題。</p>
+    <p>信心因性別、學習年資及院校類型存在顯著差異（p &lt; 0.05）。最常見的三大障礙為「不想惹麻煩」、「害怕與員工或同學衝突」及「擔心被負面評價」。</p>
+    <p><strong>教育意涵：</strong>建立心理安全的教學環境、透明的申訴機制及結構化輔導，是賦予學生在臨床中發聲能力、強化病患安全文化的核心要素。</p>
+  </div>
+</div>
+
+<!-- ═══════════════ REFERENCES ═══════════════ -->
+<div class="ref-section">
+  <h2>References（依文中出現順序）</h2>
+  <ol class="ref-list">
+    <li>
+      Samunahmetoglu E, Yilmaz A. Comparative assessment of the accuracy of different artificial intelligence models in answering analytical and knowledge-based questions in oral and maxillofacial radiology and oral and maxillofacial surgery. <em>BMC Oral Health.</em> 2026;26. <a href="https://doi.org/10.1186/s12903-026-09032-9" target="_blank">https://doi.org/10.1186/s12903-026-09032-9</a> (PMID: 42363128)
+    </li>
+    <li>
+      Benli M. Impact of AI-Generated Feedback on Dental Student Performance in Preclinical Prosthodontics Education. <em>J Dent Educ.</em> 2026. <a href="https://doi.org/10.1002/jdd.70304" target="_blank">https://doi.org/10.1002/jdd.70304</a> (PMID: 42348423)
+    </li>
+    <li>
+      Zhang H, Yan X, Yang Y, Jin L, Yang P, Wang J. Evaluation of Six Cutting-edge Large Language Models in Answering a Set of Open-ended Questions in Dental Case Reports. <em>J Dent.</em> 2026:106853. <a href="https://doi.org/10.1016/j.jdent.2026.106853" target="_blank">https://doi.org/10.1016/j.jdent.2026.106853</a> (PMID: 42342199)
+    </li>
+    <li>
+      Reymus M, Tichy A, Diegritz C, Weisbrod B, Schwendicke F, Werner N. AI-assisted Software Development in Digital Dentistry: A Technical Innovation Report with Three Open-Source Applications. <em>J Dent.</em> 2026:106864. <a href="https://doi.org/10.1016/j.jdent.2026.106864" target="_blank">https://doi.org/10.1016/j.jdent.2026.106864</a> (PMID: 42361884)
+    </li>
+    <li>
+      Allende AB, Ehsani SS, Eber P, et al. Informed consent and ethical considerations in AI for dentistry and medicine: a scoping review. <em>Int J Med Inform.</em> 2026:106576. <a href="https://doi.org/10.1016/j.ijmedinf.2026.106576" target="_blank">https://doi.org/10.1016/j.ijmedinf.2026.106576</a> (PMID: 42372578)
+    </li>
+    <li>
+      Bjelovucic R, de Freitas BN, Nørholt SE, Taneja P, Wolff J, Pauwels R. An Exploratory Comparative Analysis of Mixed Reality Simulation Versus 3D-Printed Models for Undergraduate Training in Third Molar Removal. <em>J Dent Educ.</em> 2026. <a href="https://doi.org/10.1002/jdd.70302" target="_blank">https://doi.org/10.1002/jdd.70302</a> (PMID: 42348414)
+    </li>
+    <li>
+      Quinn BM, Colloc TNE, Kilgariff JK. Improving Early Career Dentists' Competency of Endodontic Furcal Perforation Repair: Development and Pilot Evaluation of a Simulated Model in a Quality Improvement Project. <em>Eur J Dent Educ.</em> 2026. <a href="https://doi.org/10.1111/eje.70200" target="_blank">https://doi.org/10.1111/eje.70200</a> (PMID: 42338086)
+    </li>
+    <li>
+      Orhanen K, Salmenkivi S, Mutluay MM. Dental students' learning experiences and preferences regarding the chairside digital workflow in restorative dentistry: a nationwide survey from Finland. <em>Int J Comput Dent.</em> 2026. <a href="https://doi.org/10.3290/j.ijcd.b7040930" target="_blank">https://doi.org/10.3290/j.ijcd.b7040930</a> (PMID: 42343784)
+    </li>
+    <li>
+      Karamdokht P, Babaee Hemmati Y, Dadgaran I, Falahchai M. Item analysis and performance of EMQ, MCQ, and SAQ in dental education and students' perception of extended-matching questions. <em>BMC Med Educ.</em> 2026. <a href="https://doi.org/10.1186/s12909-026-09791-7" target="_blank">https://doi.org/10.1186/s12909-026-09791-7</a> (PMID: 42343356)
+    </li>
+    <li>
+      Marinova-Takorova M, Mihaylova Z. Bridging the gap: student and staff views on teaching, learning, and assessment in dental education. <em>BMC Med Educ.</em> 2026. <a href="https://doi.org/10.1186/s12909-026-09772-w" target="_blank">https://doi.org/10.1186/s12909-026-09772-w</a> (PMID: 42343404)
+    </li>
+    <li>
+      Lee JY, Vann WF, Simancas-Pallares MA. Advancing Paediatric Dentistry Faculty Calibration for Predoctoral Education Using Entrustable Professional Activities. <em>Eur J Dent Educ.</em> 2026. <a href="https://doi.org/10.1111/eje.70221" target="_blank">https://doi.org/10.1111/eje.70221</a> (PMID: 42338225)
+    </li>
+    <li>
+      Islamzade B, Leblebicioglu Kurtulus I, Durmaz Yilmaz OM. Associations among stress, anxiety, and depression in postgraduate dental students: a cross-sectional study. <em>BMC Med Educ.</em> 2026. <a href="https://doi.org/10.1186/s12909-026-09736-0" target="_blank">https://doi.org/10.1186/s12909-026-09736-0</a> (PMID: 42351166)
+    </li>
+    <li>
+      Karaaslan F, Kavak İ. Brain drain attitudes and life satisfaction among dental students in Türkiye: a multidimensional analysis. <em>BMC Med Educ.</em> 2026. <a href="https://doi.org/10.1186/s12909-026-09695-6" target="_blank">https://doi.org/10.1186/s12909-026-09695-6</a> (PMID: 42337563)
+    </li>
+    <li>
+      Matoug-Elwerfelli M, Hassouneh L, Ali K, et al. Self-Reported Confidence and Perceived Barriers in Raising Concerns Among Dental Students and Trainees in the Gulf Cooperation Council Region. <em>J Dent Educ.</em> 2026. <a href="https://doi.org/10.1002/jdd.70292" target="_blank">https://doi.org/10.1002/jdd.70292</a> (PMID: 42338165)
+    </li>
+  </ol>
+</div>
+
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <p>本週報由 PubMed 文獻自動彙整，內容導讀經 AI 輔助撰寫，僅供教育與研究參考。</p>
+  <p style="margin-top:6px;">資料來源：<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed / MEDLINE</a>｜涵蓋期間：2026/06/21–06/27｜製作日期：2026/06/30</p>
+</footer>
+
+</body>
+</html>
