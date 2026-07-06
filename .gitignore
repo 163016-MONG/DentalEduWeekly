@@ -1,0 +1,4 @@
+# 憑證檔，切勿提交
+.github_token
+.github_token.txt
+*.token
