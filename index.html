@@ -1,308 +1,43 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>牙醫教育研究週報｜2026/09/27–10/03</title>
-<style>
-  * { box-sizing: border-box; }
-  body { margin: 0; padding: 0; font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, sans-serif; background: #eef2f6; color: #23303d; line-height: 1.85; }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px 60px; }
-  header { background: linear-gradient(135deg, #1a4b7c 0%, #2a6ca8 55%, #3e8fc4 100%); color: #fff; padding: 46px 16px 38px; text-align: center; box-shadow: 0 4px 18px rgba(26,75,124,.25); }
-  header h1 { margin: 0 0 8px; font-size: 2.05rem; letter-spacing: 1px; }
-  header .sub { font-size: 1.05rem; opacity: .95; }
-  .meta-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 22px; }
-  .meta-bar span { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.3); border-radius: 20px; padding: 5px 16px; font-size: .9rem; }
-  .intro-note { background: #fff8e6; border-left: 5px solid #e0a32e; border-radius: 8px; padding: 18px 22px; margin: 28px 0; font-size: .94rem; color: #5c4415; }
-  .intro-note strong { color: #8a6314; }
-  nav.toc { background: #fff; border-radius: 12px; padding: 22px 26px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(26,75,124,.09); }
-  nav.toc h2 { margin: 0 0 12px; font-size: 1.1rem; color: #1a4b7c; }
-  nav.toc ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
-  nav.toc a { display: inline-block; text-decoration: none; color: #1a4b7c; background: #eaf2f9; border: 1px solid #cfe0ee; border-radius: 8px; padding: 7px 14px; font-size: .93rem; transition: .18s; }
-  nav.toc a:hover { background: #1a4b7c; color: #fff; }
-  h2.section { font-size: 1.32rem; color: #1a4b7c; margin: 44px 0 18px; padding-bottom: 10px; border-bottom: 3px solid #1a4b7c; }
-  .card { background: #fff; border-radius: 12px; padding: 24px 26px; margin-bottom: 22px; box-shadow: 0 2px 10px rgba(26,75,124,.08); border-left: 5px solid #3e8fc4; }
-  .tags { margin-bottom: 10px; }
-  .tag { display: inline-block; background: #1a4b7c; color: #fff; font-size: .76rem; border-radius: 4px; padding: 3px 10px; margin-right: 6px; letter-spacing: .5px; }
-  .tag.alt { background: #4a7f52; }
-  .tag.warn { background: #b06a1f; }
-  .journal { font-size: .9rem; color: #486079; font-weight: 600; }
-  .dates { font-size: .84rem; color: #7a8ba0; margin: 4px 0 10px; }
-  .card h3 { margin: 0 0 8px; font-size: 1.06rem; line-height: 1.55; }
-  .card h3 a { color: #14385c; text-decoration: none; border-bottom: 1px dotted #7fa8ca; }
-  .card h3 a:hover { color: #2a6ca8; }
-  .authors { font-size: .85rem; color: #6a7c90; font-style: italic; margin-bottom: 14px; }
-  .digest { font-size: .96rem; color: #2c3a49; }
-  .digest strong { color: #1a4b7c; }
-  h2.refs { font-size: 1.3rem; color: #1a4b7c; margin: 50px 0 16px; padding-bottom: 10px; border-bottom: 3px solid #1a4b7c; }
-  ol.reflist { background: #fff; border-radius: 12px; padding: 24px 26px 24px 48px; box-shadow: 0 2px 10px rgba(26,75,124,.08); }
-  ol.reflist li { margin-bottom: 14px; font-size: .88rem; color: #3b4a5a; line-height: 1.7; }
-  ol.reflist a { color: #2a6ca8; word-break: break-all; }
-  .pmid { color: #7a8ba0; }
-  footer { margin-top: 46px; padding: 26px 20px; text-align: center; background: #1a4b7c; color: #d6e6f3; border-radius: 12px; font-size: .86rem; }
-  footer p { margin: 5px 0; }
-  @media (max-width: 600px) { header h1 { font-size: 1.5rem; } .card { padding: 18px; } }
-
-</style>
-</head>
-<body>
-
-<header>
-  <h1>牙醫學教育研究新知週報</h1>
-  <div class="sub">Weekly Digest of Dental Education Research</div>
-  <div class="meta-bar">
-    <span>涵蓋期間：2026/09/27 – 10/03</span>
-    <span>精選 15 篇</span>
-    <span>資料來源：PubMed</span>
-  </div>
-</header>
-
-<div class="wrap">
-
-  <div class="intro-note">
-    <strong>本期重點。</strong>本週牙醫教育文獻有三條主軸：其一，生成式 AI 從「能不能答題」進入「能不能帶教」——隨機對照試驗顯示 AI 輔助的 VR 技能訓練操作分數優於教師帶領（Cohen d=0.70），同時另有研究指出 LLM 在高複雜度考題仍有落差；其二，模擬訓練走向多模態導引與長期成效驗證，包括觸覺 VR 拔牙／麻醉模擬器的 6 個月技能保留，以及微技能階梯式進階的外科訓練；其三，課程與專業面向強調 EPA、初級照護對接、臨床情境化解剖教學，以及專業認同與倫理素養的養成。本週經 pdat 檢索共得 48 筆不重複紀錄，已排除與教育無直接關聯者，精選 15 篇。
-    <br><br>
-    <strong>關於雙日期標示。</strong>每篇文章同時標註「線上發表」與「本期收錄」兩個日期。本週報以 PubMed 的 <em>pdat</em>（出版日期／期次編入日）欄位檢索，但 metadata 回傳的 <em>publication_date</em> 為文章線上搶先刊登（Epub）日期。部分文章可能數週甚至數月前已線上刊出，之後才被正式編入期次而落在本週範圍內，故並列兩個日期，以清楚說明「文章何時發表」與「為何被本期收錄」。
-  </div>
-
-  <nav class="toc">
-    <h2>本期主題導覽</h2>
-    <ul>
-      <li><a href="#ai">🤖 AI 與牙醫教育</a></li>
-      <li><a href="#digital">🦷 模擬訓練與數位科技</a></li>
-      <li><a href="#curri">📚 課程、評量與教學</a></li>
-      <li><a href="#wellbeing">🧠 學生身心健康與職業發展</a></li>
-      <li><a href="#refs">📑 References</a></li>
-    </ul>
-  </nav>
-
-  <h2 class="section" id="ai">🤖 AI 與牙醫教育</h2>
-
-  <div class="card">
-    <div class="tags"><span class="tag">生成式 AI</span><span class="tag alt">VR 技能訓練</span></div>
-    <div class="journal">Journal of Medical Internet Research</div>
-    <div class="dates">線上發表 2026/10/01 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.2196/90938" target="_blank" rel="noopener">Effects of Generative AI-Supported Virtual Reality Dental Skill Training on Learning Performance, Visual Behavior, and Cortical Activation Among Dental Students: Stratified Randomized Controlled Trial.</a></h3>
-    <div class="authors">Wen Y, Wen C, Huang S, Chong Y, Yang D</div>
-    <div class="digest">
-      本研究探討生成式 AI（ChatGPT）能否在虛擬實境（VR）牙科前臨床技能訓練中取代教師帶領。中國某頂尖大學 123 名學生依基礎理論成績分層後隨機分組：AI 輔助組（n=62，無教師指導，僅由研究助理檢核 AI 輸出的安全性）與教師帶領組（n=61），進行為期 7 天的標準化 VR 訓練。主要結果為操作測驗分數：AI 組 77.25 分，顯著高於對照組 67.39 分（Cohen d=0.70，P<.001）；AI 組的認知負荷指標也較低（0.180 vs 0.346），並伴隨較有效率的視覺注意力分配與較強的前額葉、運動皮質活化。作者提醒，認知與神經生理結果屬探索性，且僅評估即時成績。
-      <br><br>
-      <strong>教育意涵：</strong>AI 在此被用作「無人力的個別化鷹架」，特別對自我調節學習較弱的學生助益最大。然而這只是短期、單中心結果，建議在導入時仍保留教師的回饋與安全把關，並追蹤長期技能保留。
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="tags"><span class="tag">AI 虛擬病人</span><span class="tag alt">臨床推理</span></div>
-    <div class="journal">International Dental Journal</div>
-    <div class="dates">線上發表 2026/08/17 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1016/j.identj.2026.109796" target="_blank" rel="noopener">Dental Students&#x27; Experiences With an Artificial Intelligence Chatbot to Enhance Clinical Competence in Oral Diseases.</a></h3>
-    <div class="authors">Thao TD, Duong LNT, Anh BTP, Nhan HT, Ngoc NTN, Nam NLH, et al.</div>
-    <div class="digest">
-      口腔疾病診斷需要大量重複的臨床練習，但前臨床與早期臨床階段的機會有限。越南芹苴醫藥大學團隊開發以大型語言模型驅動的虛擬病人聊天機器人平台 AIDE，邀請 112 名五年級學生進行為期 30 天的自主病例模擬，共產生 1,016 次互動。使用前不到四分之一的學生對獨立進行臨床檢查與診斷有信心；使用後 84.8% 表示已準備好進入臨床實習，「臨床準備度提升」（4.31±0.81）與「未來願意持續使用」（4.29±0.69）皆獲高分，且不相關或不友善回應的比例很低。研究屬單組、自評式設計，未測量實際診斷能力。
-      <br><br>
-      <strong>教育意涵：</strong>LLM 虛擬病人可低成本擴充問診與鑑別診斷的練習量，適合作為見習前的補充訓練。後續研究應納入客觀的能力評量，並建立回應正確性的審核機制。
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="tags"><span class="tag">大型語言模型</span><span class="tag warn">評量</span></div>
-    <div class="journal">European Journal of Dental Education</div>
-    <div class="dates">線上發表 2026/09/30 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1111/eje.70319" target="_blank" rel="noopener">Artificial Intelligence in Dental Examinations: Performance Analysis of ChatGPT, Gemini, and Undergraduate Students.</a></h3>
-    <div class="authors">Ribeiro CG, de Oliveira RG, Porto FR, Hespanhol FL, Ferraz Júnior AML</div>
-    <div class="digest">
-      隨著 AI 聊天機器人能夠解題，教師必須了解它們在牙醫學考試中的真實表現。巴西研究團隊將牙醫學系考試題目輸入付費版 ChatGPT-5 與免費版 Gemini，比較答題正確率與學生得分，並分析回答字數、題目認知複雜度與知識領域。結果顯示兩者表現相近，整體正確率皆高於學生；低複雜度題目兩者皆達 100%，中等複雜度為 90–100%，高複雜度題目則下降（ChatGPT 78.6%、Gemini 71.4%）。這表示 LLM 對記憶與理解層次的題目已具高度能力，但在高階推理題仍有落差。
-      <br><br>
-      <strong>教育意涵：</strong>以記憶型選擇題為主的評量，其鑑別力恐受 AI 衝擊。教師應提高高階認知題、情境化與口試／操作型評量的比重，並與學生公開討論 AI 使用規範。
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="tags"><span class="tag">系統性回顧</span><span class="tag alt">AI 與評量</span></div>
-    <div class="journal">International Dental Journal</div>
-    <div class="dates">線上發表 2026/07/11 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1016/j.identj.2026.109733" target="_blank" rel="noopener">Artificial Intelligence in Dental Education: Overview of Teaching, Assessment and Academic Performance Prediction.</a></h3>
-    <div class="authors">Chuenjitwongsa S, Arunratanothai T, Rewthamrongsris P, Sumrejkanchanakij P, Tavedhikul K, Samaranayake LP, et al.</div>
-    <div class="digest">
-      泰國朱拉隆功大學等團隊檢索 PubMed 與 Scopus（2014 年 11 月至 2026 年 3 月），納入 42 篇研究，從教學與學習、評量、學業表現預測三個面向綜述 AI 在牙醫教育的應用。結果顯示，聊天機器人、模擬與生成式模型可提升學生參與度與學習效率並支持臨床決策；AI 輔助的放射線影像判讀與科學寫作也呈現較佳成果；在評量上，AI 對申論題評分與主題分析與人類評分者達中至高度相關；預測模型則能預測學生成績，支持個人化學習與早期介入。作者同時強調，須修訂課程、培訓教師，並維持人類監督。
-      <br><br>
-      <strong>教育意涵：</strong>此回顧可作為各校制定 AI 整合策略的證據地圖：AI 的價值在於教學效率、個人化與評量輔助，而非取代教師。優先事項是教師的 AI 素養訓練與倫理、透明度的規範。
-    </div>
-  </div>
-
-  <h2 class="section" id="digital">🦷 模擬訓練與數位科技</h2>
-
-  <div class="card">
-    <div class="tags"><span class="tag">VR 模擬</span><span class="tag alt">齒內治療</span></div>
-    <div class="journal">JMIR Serious Games</div>
-    <div class="dates">線上發表 2026/10/01 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.2196/100884" target="_blank" rel="noopener">Virtual Reality-Based Mirror Guidance for Indirect Vision Training in Minimally Invasive Endodontic Access Cavity Preparation Among Dental Students: Randomized Controlled Crossover Trial.</a></h3>
-    <div class="authors">Suranin U, Getrak M, Suebnukarn S, Haddawy P, Yin MS, Weller R, et al.</div>
-    <div class="digest">
-      微創根管治療的進路洞形製備需依賴牙科口鏡的間接視野，對學生是高難度技能，但多數 VR 模擬器缺乏即時口鏡位置導引。泰國研究團隊以 30 名四年級前臨床學生進行隨機交叉試驗（4×4 拉丁方設計，間隔 48 小時），比較口語、視覺、觸覺三種 VR 口鏡導引與無導引。導引方式顯著影響結果誤差分數（F=20.34，P<.001）；相較於無導引，口語（MD −0.50）、視覺（MD −0.68）與觸覺導引（MD −0.63）皆顯著降低誤差，操作區可視時間也顯著增加。三者之間差異不大，且完成時間、姿勢誤差與易用性無顯著差異。
-      <br><br>
-      <strong>教育意涵：</strong>針對「間接視野」這類難以口述的技能，VR 的多模態即時導引可有效降低錯誤。未來可發展依學習者特性自動切換導引模式的適應式系統。
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="tags"><span class="tag">觸覺 VR</span><span class="tag alt">拔牙與麻醉</span></div>
-    <div class="journal">International Dental Journal</div>
-    <div class="dates">線上發表 2026/07/21 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1016/j.identj.2026.109712" target="_blank" rel="noopener">Development and Validation of a Haptic Virtual Reality Simulator for Tooth Extraction and Inferior Alveolar Nerve Block.</a></h3>
-    <div class="authors">Ren Y, Xu Y, Yuan Z, Xiong M, Zou Z, Chau RCW, et al.</div>
-    <div class="digest">
-      拔牙與下齒槽神經阻斷麻醉（IANB）是牙醫師必備能力，但既有模擬器缺乏整合。香港大學等團隊開發觸覺 VR 模擬器 TELA-sim，納入 155 名學生與住院醫師（新手 72、中階 83）驗證其表面效度與建構效度，並比較 79 名接受 TELA-sim 訓練的四年級學生與 77 名接受傳統訓練的歷史對照組。模擬器具良好表面效度；有趣的是，新手在流程遵循度上反而優於中階者（拔牙 91.5 vs 85.0；IANB 71.0 vs 62.0）。6 個月後，TELA-sim 組在假頭實作測驗的分數顯著較高（中位數 84 vs 75，P<.001）。作者指出 6 個月以上的長期保留效果仍待追蹤。
-      <br><br>
-      <strong>教育意涵：</strong>此研究顯示模擬訓練能促進技能保留與遷移，並可在無風險環境中反覆練習標準流程。但新手勝過中階者的結果提醒我們，模擬器指標未必等同臨床能力，需搭配外部效標驗證。
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="tags"><span class="tag">比色訓練</span><span class="tag alt">模擬教具</span></div>
-    <div class="journal">International Dental Journal</div>
-    <div class="dates">線上發表 2026/07/27 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1016/j.identj.2026.109778" target="_blank" rel="noopener">Development and Exploratory Pilot Evaluation of a Dual-Dimensional Shade Matching Training System.</a></h3>
-    <div class="authors">Zhang L, Zhang J, Yang W, Jiang X, Wang J, Zheng B, et al.</div>
-    <div class="digest">
-      美觀需求日增，但臨床比色訓練缺乏標準化教具與客觀評分。中國研究團隊研發「雙維度比色訓練與評分系統（DDSMTS）」，包含擬真頭模、標準化假牙與支台齒模型、比色板，以及整合色差計算、隨機出題與自動評分的軟體，以 CIE-LAB 色差換算分數。33 名學生於基線、訓練後 1 週與 2 週接受評量：假牙比色分數由 38.28 提升至 42.74、再到 48.06；支台齒由 40.88 升至 45.10、再到 48.45，各時間點皆顯著進步（P<.05）。研究為單組探索性前測後測，缺乏對照組。
-      <br><br>
-      <strong>教育意涵：</strong>以客觀色差量化取代主觀評分，可使比色這類難以標準化的技能得到即時、可重複的回饋，值得納入假牙補綴前臨床課程，但需以對照研究確認成效。
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="tags"><span class="tag">微技能</span><span class="tag alt">外科技能</span></div>
-    <div class="journal">International Dental Journal</div>
-    <div class="dates">線上發表 2026/09/03 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1016/j.identj.2026.111097" target="_blank" rel="noopener">Structured Microskill Stepwise Progression for Undergraduate Tooth Extraction: A Randomized Mixed-Methods Study.</a></h3>
-    <div class="authors">Wu Z, Wang M, Luo X, Liu X, Yang L, Gao S, et al.</div>
-    <div class="digest">
-      傳統師徒制拔牙教學常使學生表現差異大。中國研究團隊提出「微技能逐步進階模式」：將拔牙拆解為九個階段，每階段須完成五次觀察與五次成功的督導下操作才可進階。40 名五年級學生隨機分為傳統教學組與微技能組，於 8 週口腔外科輪訓後由兩位盲化評審以修改版 DOPS 評分（評分者間信度 ICC=0.86）。介入組得分顯著較高（94.60±3.97 vs 88.25±6.41，d=1.19，P<.001），分數變異較小（範圍 87–100 vs 75–96）。質性資料亦顯示學習進程更清楚。問卷結果屬探索性。
-      <br><br>
-      <strong>教育意涵：</strong>把程序性技能拆為「階段＋門檻」的精熟取向，有助於標準化訓練並提供透明的信賴（entrustment）依據；實施時須考量病例來源與督導者的工作負擔。
-    </div>
-  </div>
-
-  <h2 class="section" id="curri">📚 課程、評量與教學</h2>
-
-  <div class="card">
-    <div class="tags"><span class="tag">解剖學</span><span class="tag alt">案例導向學習</span></div>
-    <div class="journal">Annals of Anatomy</div>
-    <div class="dates">線上發表 2026/10/02 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1016/j.aanat.2026.153385" target="_blank" rel="noopener">Teaching Anatomy in a Clinical Context in Dental Education: Analysis of the Impact of Two Controlled Educational Interventions on Examination Performance and Motivation.</a></h3>
-    <div class="authors">Steinborn A, Vertic V, Wapenhans N, Brunk I</div>
-    <div class="digest">
-      解剖學是口腔外科、影像判讀、麻醉與緊急處置的基礎，但臨床脈絡化的解剖教學在牙醫教育中證據有限。德國柏林夏里特大學於前臨床課程執行兩項對照介入：整合放射影像的頭頸部解剖課程，以及以神經解剖為主的案例導向學習（CBL）。共 157 名學生（介入組 55、對照組 102）。影像整合課程總分較高但未達顯著（21.26 vs 19.17，d=0.33，p=0.188）；神經解剖 CBL 則顯著提升總分（23.59 vs 20.20，d=0.49，p=0.044），空間解剖分數差異更大（18.74 vs 15.37，d=0.56，p=0.021），選擇題成績差異則小。
-      <br><br>
-      <strong>教育意涵：</strong>臨床情境化的解剖教學，對空間性理解的提升尤為明顯，而選擇題無法反映此優勢——提示評量形式也應配合調整。建議早期課程納入影像與臨床案例。
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="tags"><span class="tag">EPA</span><span class="tag alt">畢業後訓練</span></div>
-    <div class="journal">Primary Dental Journal</div>
-    <div class="dates">線上發表 2026/09/30 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1177/20501684261492413" target="_blank" rel="noopener">Entrustable Professional Activities in UK postgraduate Dental Education: A Narrative Review.</a></h3>
-    <div class="authors">O&#x27;Connor TJ</div>
-    <div class="digest">
-      可信賴專業活動（EPA）近來已被納入英格蘭與威爾斯的早期牙醫訓練課程（EYDTC），涵蓋基礎牙醫師、基礎牙科治療師、牙科核心訓練等計畫，並被 GIRFT 與英國兒童牙科學會採用，用於評估在全身麻醉場域工作的牙醫師與牙科護士。這篇敘述性回顧說明 EPA 的發展與實施歷程，檢視現有證據，並呈現英國為 EYDTC 發展的各項 EPA。回顧屬敘述性質，摘要中未呈現量化結果。
-      <br><br>
-      <strong>教育意涵：</strong>EPA 把能力本位教育轉化為真實臨床任務的信賴決策，並可用於不同職類。對正規劃畢業後一般醫學訓練（PGY）的單位而言，英國經驗可作為設計 EPA 與督導等級的參考。
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="tags"><span class="tag">課程設計</span><span class="tag alt">初級照護</span></div>
-    <div class="journal">Primary Dental Journal</div>
-    <div class="dates">線上發表 2026/09/30 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1177/20501684261491432" target="_blank" rel="noopener">Aligning Undergraduate Dental Education with Primary Dental Care: Responding to Technological Change and Contemporary Practice.</a></h3>
-    <div class="authors">Blum IR</div>
-    <div class="digest">
-      本觀點文章主張，大學部牙醫教育應與初級牙科照護更緊密結合，因為畢業生面對的不只是臨床技術，更是當代診療的複雜性、不確定性與相互競爭的需求。作者提出：納入真實的初級照護與社區外展學習、強化牙醫與牙科輔助專業學生的整合、採取強調縱向能力與病人管理的評量；並探討數位牙科、AI 與模擬應如何納入課程，重點在培養批判性判斷、適應力與適當使用科技。隨著英國牙醫訓練擴編，初級照護應被視為課程設計的主動夥伴，而非僅是畢業生的終點。
-      <br><br>
-      <strong>教育意涵：</strong>科技導入須以「判斷力」為核心，而非以工具熟練度為目標。校外見習、跨職類教育與縱向評量可作為課程改革的具體切入點。
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="tags"><span class="tag">生物安全</span><span class="tag warn">感染管制</span></div>
-    <div class="journal">Health Science Reports</div>
-    <div class="dates">線上發表 2026/09/27 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1002/hsr2.72838" target="_blank" rel="noopener">Assessment of Multidimensional Biosafety Practices in Clinical Dental Training: A Cross-Sectional Study.</a></h3>
-    <div class="authors">Alshammari AF, Madfa AA, Alkhalil BR, Alazaima DM, Alshammari HA, Alshammari AZ, et al.</div>
-    <div class="digest">
-      生物安全與感染管制是臨床訓練的核心，但學生遵循程度不一。沙烏地阿拉伯哈伊勒大學牙醫學院對 99 名臨床訓練中的大學部學生進行問卷調查，評估個人防護、牙科診療椅管理、器械管理、廢棄物管理與人體工學五個面向。結果顯示整體遵循度中高：診療椅管理（0.78）與廢棄物管理（0.78）最高，個人防護（0.67）與人體工學（0.74）變異較大；僅診療椅管理在各臨床科別間有顯著差異（P=0.045），以技術密集科別較佳。個人防護與其他面向無顯著相關，顯示行為彼此獨立。為自填式問卷，可能有社會期許偏誤。
-      <br><br>
-      <strong>教育意涵：</strong>個人防護是最需要加強的環節，且此行為似乎獨立於其他感控行為，需要單獨設計教學與稽核。建議依科別提供針對性訓練並持續監測。
-    </div>
-  </div>
-
-  <h2 class="section" id="wellbeing">🧠 學生身心健康與職業發展</h2>
-
-  <div class="card">
-    <div class="tags"><span class="tag">專業認同</span><span class="tag alt">自我調節學習</span></div>
-    <div class="journal">Journal of Dental Education</div>
-    <div class="dates">線上發表 2026/09/30 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1002/jdd.70392" target="_blank" rel="noopener">Exploratory Associations Among Professional Identity Formation, Self-Efficacy, and Self-Regulated Learning in Dental Clinical Education.</a></h3>
-    <div class="authors">Lee B, Yang EB</div>
-    <div class="digest">
-      專業認同形成與臨床學習動機之間的關聯尚待釐清。本研究採循序解釋型混合方法，對 122 名參與病人照護的三、四年級牙醫學生施測專業認同形成、一般與社會自我效能、自我調節學習，並訪談 18 名學生。專業認同形成與自我調節學習各面向呈正相關；一般自我效能呈現較廣泛的間接效果，社會自我效能的間接效果型態不同；任務價值則與專業認同形成直接相關。訪談指出，認同與信心是在真實的病人照護，以及與病人、教師、同儕的互動中共同成長；學生也透過責任導向的準備、治療後反思、運用社會資源來調節學習。屬探索性研究，因果方向未定。
-      <br><br>
-      <strong>教育意涵：</strong>真實病人照護本身就是專業認同形成的主要場域。教師可透過治療後反思、同儕討論與給予病人照護責任感，同步促進認同與自主學習。
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="tags"><span class="tag">專業素養</span><span class="tag alt">質性研究</span></div>
-    <div class="journal">JDR Clinical &amp; Translational Research</div>
-    <div class="dates">線上發表 2026/02/11 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1177/23800844251413578" target="_blank" rel="noopener">Exploring Dentists&#x27; Views on Professionalism and Identity Formation: A Template Analysis Study.</a></h3>
-    <div class="authors">Kwon JH, von Bergmann H</div>
-    <div class="digest">
-      專業素養是牙醫教育的核心，但執業牙醫面臨的挑戰及其對專業認同的影響較少被研究。加拿大溫哥華都會區研究者以半結構式訪談 10 位執業牙醫，並採範本分析法。受訪者認為病人中心照護、有效溝通、遵守倫理與維持界線是專業素養的關鍵；工作經驗強化專業認同，但專業認同與倫理行為之間可能存在落差，需要有意識、有引導的自我反思。受訪者也指出倫理與跨專業合作訓練不足，並建議加強專業素養訓練、強化機構監督與改善職場動態。樣本小且限於單一地區，推論有限。
-      <br><br>
-      <strong>教育意涵：</strong>倫理與專業素養不會隨年資自動內化。建議將「有引導的反思」與案例式倫理討論整合進課程，並把訓練延伸到畢業後。
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="tags"><span class="tag">溝通技巧</span><span class="tag alt">SPIKES</span></div>
-    <div class="journal">Journal of Dentistry</div>
-    <div class="dates">線上發表 2026/05/28 ｜ 本期收錄 2026/09/27–10/03</div>
-    <h3><a href="https://doi.org/10.1016/j.jdent.2026.106798" target="_blank" rel="noopener">An educational intervention for teaching bad news communication in dentistry: A pilot study in Italy.</a></h3>
-    <div class="authors">Martins BNFL, Nucci L, Saldivia-Siracusa C, Pedroso CM, Fiori F, Romano A, et al.</div>
-    <div class="digest">
-      向病人傳達壞消息（如治療失敗、口腔癌診斷）是牙醫師少有訓練、卻很重要的溝通任務。義大利坎帕尼亞大學進行單中心、單組前後測試驗，對 100 名大學部（四至六年級）與 26 名研究所學生實施以 SPIKES 為基礎的面授訓練，內容包括導論講座、兩段模擬影片與小組討論，並以前後測問卷評估傳達壞消息的自信。大學部學生在 16 個情境中有 14 個自信顯著提升（p<0.05）；研究所學生僅「治療失敗」一項顯著改變（p=0.025）。研究為非隨機單組設計，測量的是自評信心而非實際溝通表現。
-      <br><br>
-      <strong>教育意涵：</strong>壞消息溝通可用短時、低成本的結構化訓練（講座＋影片＋討論）導入。後續應以標準化病人或 OSCE 客觀評量實際行為改變。
-    </div>
-  </div>
-
-  <h2 class="refs" id="refs">📑 References</h2>
-  <ol class="reflist">
-    <li>Wen Y, Wen C, Huang S, Chong Y, Yang D. Effects of Generative AI-Supported Virtual Reality Dental Skill Training on Learning Performance, Visual Behavior, and Cortical Activation Among Dental Students: Stratified Randomized Controlled Trial. <em>Journal of Medical Internet Research</em>. 2026;28:e90938. <a href="https://doi.org/10.2196/90938" target="_blank" rel="noopener">https://doi.org/10.2196/90938</a> <span class="pmid">PMID: 42821990</span></li>
-    <li>Thao TD, Duong LNT, Anh BTP, Nhan HT, Ngoc NTN, Nam NLH, et al.. Dental Students&#x27; Experiences With an Artificial Intelligence Chatbot to Enhance Clinical Competence in Oral Diseases. <em>International Dental Journal</em>. 2026;76(5):109796. <a href="https://doi.org/10.1016/j.identj.2026.109796" target="_blank" rel="noopener">https://doi.org/10.1016/j.identj.2026.109796</a> <span class="pmid">PMID: 42607516</span></li>
-    <li>Ribeiro CG, de Oliveira RG, Porto FR, Hespanhol FL, Ferraz Júnior AML. Artificial Intelligence in Dental Examinations: Performance Analysis of ChatGPT, Gemini, and Undergraduate Students. <em>European Journal of Dental Education</em>. 2026;. <a href="https://doi.org/10.1111/eje.70319" target="_blank" rel="noopener">https://doi.org/10.1111/eje.70319</a> <span class="pmid">PMID: 42813617</span></li>
-    <li>Chuenjitwongsa S, Arunratanothai T, Rewthamrongsris P, Sumrejkanchanakij P, Tavedhikul K, Samaranayake LP, et al.. Artificial Intelligence in Dental Education: Overview of Teaching, Assessment and Academic Performance Prediction. <em>International Dental Journal</em>. 2026;76(5):109733. <a href="https://doi.org/10.1016/j.identj.2026.109733" target="_blank" rel="noopener">https://doi.org/10.1016/j.identj.2026.109733</a> <span class="pmid">PMID: 42435734</span></li>
-    <li>Suranin U, Getrak M, Suebnukarn S, Haddawy P, Yin MS, Weller R, et al.. Virtual Reality-Based Mirror Guidance for Indirect Vision Training in Minimally Invasive Endodontic Access Cavity Preparation Among Dental Students: Randomized Controlled Crossover Trial. <em>JMIR Serious Games</em>. 2026;14:e100884. <a href="https://doi.org/10.2196/100884" target="_blank" rel="noopener">https://doi.org/10.2196/100884</a> <span class="pmid">PMID: 42821988</span></li>
-    <li>Ren Y, Xu Y, Yuan Z, Xiong M, Zou Z, Chau RCW, et al.. Development and Validation of a Haptic Virtual Reality Simulator for Tooth Extraction and Inferior Alveolar Nerve Block. <em>International Dental Journal</em>. 2026;76(5):109712. <a href="https://doi.org/10.1016/j.identj.2026.109712" target="_blank" rel="noopener">https://doi.org/10.1016/j.identj.2026.109712</a> <span class="pmid">PMID: 42480136</span></li>
-    <li>Zhang L, Zhang J, Yang W, Jiang X, Wang J, Zheng B, et al.. Development and Exploratory Pilot Evaluation of a Dual-Dimensional Shade Matching Training System. <em>International Dental Journal</em>. 2026;76(5):109778. <a href="https://doi.org/10.1016/j.identj.2026.109778" target="_blank" rel="noopener">https://doi.org/10.1016/j.identj.2026.109778</a> <span class="pmid">PMID: 42508217</span></li>
-    <li>Wu Z, Wang M, Luo X, Liu X, Yang L, Gao S, et al.. Structured Microskill Stepwise Progression for Undergraduate Tooth Extraction: A Randomized Mixed-Methods Study. <em>International Dental Journal</em>. 2026;76(5):111097. <a href="https://doi.org/10.1016/j.identj.2026.111097" target="_blank" rel="noopener">https://doi.org/10.1016/j.identj.2026.111097</a> <span class="pmid">PMID: 42691765</span></li>
-    <li>Steinborn A, Vertic V, Wapenhans N, Brunk I. Teaching Anatomy in a Clinical Context in Dental Education: Analysis of the Impact of Two Controlled Educational Interventions on Examination Performance and Motivation. <em>Annals of Anatomy</em>. 2026;:153385. <a href="https://doi.org/10.1016/j.aanat.2026.153385" target="_blank" rel="noopener">https://doi.org/10.1016/j.aanat.2026.153385</a> <span class="pmid">PMID: 42826889</span></li>
-    <li>O&#x27;Connor TJ. Entrustable Professional Activities in UK postgraduate Dental Education: A Narrative Review. <em>Primary Dental Journal</em>. 2026;:20501684261492413. <a href="https://doi.org/10.1177/20501684261492413" target="_blank" rel="noopener">https://doi.org/10.1177/20501684261492413</a> <span class="pmid">PMID: 42813559</span></li>
-    <li>Blum IR. Aligning Undergraduate Dental Education with Primary Dental Care: Responding to Technological Change and Contemporary Practice. <em>Primary Dental Journal</em>. 2026;:20501684261491432. <a href="https://doi.org/10.1177/20501684261491432" target="_blank" rel="noopener">https://doi.org/10.1177/20501684261491432</a> <span class="pmid">PMID: 42813553</span></li>
-    <li>Alshammari AF, Madfa AA, Alkhalil BR, Alazaima DM, Alshammari HA, Alshammari AZ, et al.. Assessment of Multidimensional Biosafety Practices in Clinical Dental Training: A Cross-Sectional Study. <em>Health Science Reports</em>. 2026;9(10):e72838. <a href="https://doi.org/10.1002/hsr2.72838" target="_blank" rel="noopener">https://doi.org/10.1002/hsr2.72838</a> <span class="pmid">PMID: 42807665</span></li>
-    <li>Lee B, Yang EB. Exploratory Associations Among Professional Identity Formation, Self-Efficacy, and Self-Regulated Learning in Dental Clinical Education. <em>Journal of Dental Education</em>. 2026;. <a href="https://doi.org/10.1002/jdd.70392" target="_blank" rel="noopener">https://doi.org/10.1002/jdd.70392</a> <span class="pmid">PMID: 42813277</span></li>
-    <li>Kwon JH, von Bergmann H. Exploring Dentists&#x27; Views on Professionalism and Identity Formation: A Template Analysis Study. <em>JDR Clinical &amp; Translational Research</em>. 2026;11(4):691-702. <a href="https://doi.org/10.1177/23800844251413578" target="_blank" rel="noopener">https://doi.org/10.1177/23800844251413578</a> <span class="pmid">PMID: 41673564</span></li>
-    <li>Martins BNFL, Nucci L, Saldivia-Siracusa C, Pedroso CM, Fiori F, Romano A, et al.. An educational intervention for teaching bad news communication in dentistry: A pilot study in Italy. <em>Journal of Dentistry</em>. 2026;173:106798. <a href="https://doi.org/10.1016/j.jdent.2026.106798" target="_blank" rel="noopener">https://doi.org/10.1016/j.jdent.2026.106798</a> <span class="pmid">PMID: 42214654</span></li>
-  </ol>
-
-  <footer>
-    <p>製作日期：2026/10/05（星期一）</p>
-    <p>本週報由 PubMed 文獻自動彙整，內容導讀經 AI 輔助撰寫，僅供教育與研究參考。</p>
-    <p>資料來源：PubMed（https://pubmed.ncbi.nlm.nih.gov/）</p>
-  </footer>
-</div>
-</body>
-</html>
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>牙醫教育研究週報 2026/10/04–2026/10/10</title>
+<style>body{margin:0;font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;background:#f3f6fa;color:#222;line-height:1.8}
+header{background:linear-gradient(135deg,#1a4b7c,#2e7bbf);color:#fff;padding:40px 20px;text-align:center}header h1{margin:0 0 10px;font-size:28px}header p{margin:4px 0;opacity:.95}
+nav{position:sticky;top:0;background:#fff;box-shadow:0 2px 6px #0002;padding:10px;text-align:center;z-index:5}nav a{display:inline-block;margin:4px 8px;color:#1a4b7c;text-decoration:none;font-weight:bold}
+main{max-width:860px;margin:0 auto;padding:20px}h2{color:#1a4b7c;border-left:6px solid #1a4b7c;padding-left:12px;margin-top:36px}
+.card{background:#fff;border-radius:10px;padding:20px;margin:16px 0;box-shadow:0 2px 8px #0001}.card h3{margin:8px 0;font-size:17px;line-height:1.5}.card h3 a{color:#1a4b7c;text-decoration:none}.card h3 a:hover{text-decoration:underline}
+.meta{font-size:13px;color:#666}.meta span{margin-right:12px}.tag{background:#e3eefa;color:#1a4b7c;padding:2px 10px;border-radius:12px;font-weight:bold}.au{font-size:13px;color:#555;margin:4px 0}
+.edu{background:#f0f6fc;border-left:4px solid #1a4b7c;padding:8px 12px;border-radius:4px}.refs li{font-size:13px;margin-bottom:8px;word-break:break-word}.refs a{color:#1a4b7c}
+footer{text-align:center;color:#666;font-size:13px;padding:30px 20px}</style></head><body>
+<header><h1>🦷 牙醫教育研究新知週報</h1><p>涵蓋日期：2026/10/04（日）– 2026/10/10（六）</p><p>精選篇數：15 篇　｜　資料來源：PubMed</p></header>
+<nav><a href="#ai">🤖 AI 與牙醫教育</a><a href="#sim">🦷 模擬訓練與數位科技</a><a href="#cur">📚 課程、評量與教學</a><a href="#well">🧠 學生身心健康與職業發展</a><a href="#oth">🌐 其他重要主題</a><a href="#refs">📖 References</a></nav><main><section id="ai"><h2>🤖 AI 與牙醫教育</h2><article class="card"><div class="meta"><span class="tag">大型語言模型 / 影像教學</span><span>Eur J Dent Educ</span><span>2026-10-10</span></div>
+<h3><a href="https://doi.org/10.1111/eje.70325" target="_blank" rel="noopener">1. AI-Driven Feedback on Bitewing Radiographic Technique: A Comparative Study of Large Language Models.</a></h3>
+<p class="au">Rabelo KA, Swinckles L, Delamare E, Duan Z, Trinh E, Ma Y, Kim J, Miletic V</p><p>咬翼片攝影常因操作者定位錯誤而影響齲齒診斷，若能由大型語言模型（LLM）提供情境式回饋，可減輕教師負擔。本研究比較 GPT o1、GPT o3-mini、Gemini 2.0 Flash 與 Grok 3 四種具推理能力的模型，針對由口腔顎面放射科專家設計的 10 種定位錯誤情境，以原始提示與工程化提示各產出回饋，共 80 份輸出，由兩位專家以 5 點量表評分細節、內容、清晰度與相關性，並以累積連結混合效應模型分析。結果顯示 LLM 與提示類型存在顯著交互作用：GPT o3-mini 得高分的機率顯著低於 Gemini 2.0 Flash，且工程化提示反而降低 Grok 3 的表現；錯誤類型也會造成模型間差異。</p><p class="edu"><strong>教育意涵：</strong>AI 回饋品質會因模型、提示設計與錯誤類型而異，導入前必須進行模型專屬的提示測試與專家審閱，不宜直接取代教師回饋。</p></article><article class="card"><div class="meta"><span class="tag">AI 輔助設計 / 活動義齒</span><span>J Dent Educ</span><span>2026-10-06</span></div>
+<h3><a href="https://doi.org/10.1002/jdd.70395" target="_blank" rel="noopener">2. Evaluating the Effectiveness of Artificial Intelligence (AI)-Supported Removable Partial Denture Design Tools in Dental Education.</a></h3>
+<p class="au">Chen S, Sharma LA, An S</p><p>活動局部義齒（RPD）設計需將理論原則轉化為實際判斷，是學生常見的學習難點。本混合方法研究邀請 40 位具 RPD 訓練經驗的牙科技術、牙醫學系大學部與研究所學生，35 人完成。學生先獨立完成傳統設計，再使用依補綴原則產生建議的 AI 輔助工具進行比較與反思，並填寫前後測問卷（Wilcoxon 與 Mann-Whitney U 檢定）及開放式問題。結果顯示學生的信心與理解在使用後顯著提升，工具有效性、設計體驗與視覺化的中位數評分分別為 4、4、4（IQR 3–4、4–4、4–5）；質性回饋肯定其協助視覺化設計架構，但也指出介面可用性與設計彈性的限制。</p><p class="edu"><strong>教育意涵：</strong>AI 工具適合作為輔助資源，銜接理論與實作，但無法取代手作與臨床技能訓練；樣本小，仍需更大世代驗證。</p></article><article class="card"><div class="meta"><span class="tag">AI 虛擬病人</span><span>J Dent Educ</span><span>2026-10-05</span></div>
+<h3><a href="https://doi.org/10.1002/jdd.70394" target="_blank" rel="noopener">3. AI-Powered Virtual Patients in Health Professions Education: Learner Engagement and Knowledge Application.</a></h3>
+<p class="au">Borckardt JJ, Henninger-Borckardt DE, Vuthiganon J, Annan-Coultas D, Langdale L, Kascak K, Hamil L</p><p>AI 虛擬病人可讓學生在低風險環境練習問診，但在牙醫學教育中的可行性尚待驗證。本研究將 AI 虛擬病人平台納入一年級牙醫學必修課，78 位學生各完成三次由教師設計的虛擬問診，再以 5 點量表評估使用性、學習經驗與投入動機，並以 AI 輔助分析 217 份逐字稿，涵蓋同理心、專業態度、完整性、行為健康關注、問診技巧與種族／性別潛在偏見。結果顯示可用性（M = 4.22）、學習經驗（M = 4.47）與投入動機（M = 4.42）均高；89% 偏好文字而非語音互動，45% 對虛擬人形象無偏好。逐字稿分析另顯示不同病人種族與性別下的溝通融洽度存在細微差異。</p><p class="edu"><strong>教育意涵：</strong>AI 虛擬病人在早期課程具可行性，亦可能用於偵測隱性偏見；但仍缺乏對照研究證實對學習成果的影響。</p></article></section><section id="sim"><h2>🦷 模擬訓練與數位科技</h2><article class="card"><div class="meta"><span class="tag">3D 列印 / 牙體形態</span><span>J Dent Educ</span><span>2026-10-09</span></div>
+<h3><a href="https://doi.org/10.1002/jdd.70402" target="_blank" rel="noopener">4. 3D-Printed Models to Enhance Dental Anatomy Learning: Students&#x27; Perspective.</a></h3>
+<p class="au">Garcia IM, Anagnostopoulos-King F, Melo MA, Morgan A</p><p>牙齒形態學是一年級學生的基礎，但傳統教學未必能充分培養對牙齒解剖構造的空間理解。馬里蘭大學牙醫學院在牙體解剖課程中加入放大版 3D 列印牙齒模型，讓學生在進入堆蠟實作前，先利用模型辨識重要解剖標誌，並在課後提供回饋。學生普遍認為放大模型有助於辨認解剖構造並增進對牙體形態的信心；然而仍有部分學生難以辨識特定標誌，並強調教師即時回饋的重要性。此為教學經驗報告，未提供客觀成績比較。</p><p class="edu"><strong>教育意涵：</strong>3D 列印放大模型可作為傳統教學的補充，但須搭配結構化引導與及時的教師回饋才能發揮效果。</p></article><article class="card"><div class="meta"><span class="tag">高齡與身心障礙 / 情境模擬</span><span>Eur J Dent Educ</span><span>2026-10-08</span></div>
+<h3><a href="https://doi.org/10.1111/eje.70322" target="_blank" rel="noopener">5. Aging and Disability Simulation in Dental Education: A Mixed-Methods Evaluation of Student Perceptions.</a></h3>
+<p class="au">Davis T, Pagni S, Arsenault K</p><p>人口高齡化使牙醫師必須具備照護長者與身心障礙者的能力。本混合方法研究以美國某牙醫學院三年級必修老年醫學輪訓為對象，課程包含兩個半天的沉浸式生理、感官與認知挑戰模擬、非同步模組及跨領域案例討論；前測 226 人、後測 231 人、配對 219 人。結果顯示多數面向於課後顯著提升（p &lt; 0.001），包括對年齡與障礙相關挑戰的覺察，以及與身心障礙病人溝通、評估和調整照護的信心；但對「牙科診所是否充分提供無障礙環境」的看法未達顯著變化（p = 0.084）。質性主題包括同理心、以病人為中心的彈性照護與跨專業合作。</p><p class="edu"><strong>教育意涵：</strong>結果僅為自評覺察與信心提升，並不能證明臨床能力或長期行為改變；後續需納入客觀表現指標與長期追蹤。</p></article><article class="card"><div class="meta"><span class="tag">口腔黏膜切片 / 模擬器</span><span>Eur J Dent Educ</span><span>2026-10-06</span></div>
+<h3><a href="https://doi.org/10.1111/eje.70320" target="_blank" rel="noopener">6. Enhancing Oral Mucosal Biopsy and Submucosal Injection Skills in Dental Students Using a Manikin-Compatible Buccal Mucosal Lesion Simulator.</a></h3>
+<p class="au">Wei M, Chang S, Liu Z, Wu T, Cao Z, Lin H, Liu Q, Shi Z, Wang L, Zhu Z</p><p>口腔黏膜切片與黏膜下注射是牙醫學生必備技能，但傳統口外皮膚模型無法重現口腔黏膜質地與有限的口內操作空間。研究團隊設計可裝入牙科假人頭模的頰黏膜病灶模擬器，具擬真黏膜質地與解剖限制，並依臨床程序標準建立量化評分表。2025 年 9 月，36 位四年級學生接受講解與實作訓練，以前後測問卷評估熟悉度、信心與模擬器可用性，教師則以評分表評核技術表現。結果顯示評分表能有效區分切片與注射的操作品質，學生對流程熟悉度與信心於訓練後顯著提升，且多數認為模擬器貼近臨床情境。</p><p class="edu"><strong>教育意涵：</strong>貼近臨床的專用模擬器可彌補傳統模型限制，提升術前訓練品質；但缺少對照組與長期追蹤，仍需驗證技能是否轉移至臨床。</p></article><article class="card"><div class="meta"><span class="tag">醫療緊急狀況 / 模擬訓練</span><span>Eur J Dent Educ</span><span>2026-10-10</span></div>
+<h3><a href="https://doi.org/10.1111/eje.70327" target="_blank" rel="noopener">7. Dental Students&#x27; Perceived Confidence and Preparedness Following Medical Emergency Simulation Training in Australia.</a></h3>
+<p class="au">Zachar J, Shetty S</p><p>牙科診間的醫療緊急事件雖罕見但後果嚴重，學生是否有足夠信心處理值得關注。本研究對 306 位完成新型醫療緊急模擬訓練的澳洲牙醫學生進行自填問卷調查。訓練前超過半數學生信心偏低：22.7% 表示沒有信心、39.1% 僅略有信心；訓練後 61.2% 表示相當有信心、10.4% 完全有信心。非技術性技能方面，訓練前 30.8% 自評為普通或差，訓練後 68.6% 自評為良好或優秀。另有 83.6% 認為模擬情境逼真，97.6% 同意或非常同意訓練讓自己更有準備。</p><p class="edu"><strong>教育意涵：</strong>互動式模擬能有效提升學生對緊急處置與非技術性技能的自評信心；然而為自評資料，建議未來搭配客觀表現評量。</p></article><article class="card"><div class="meta"><span class="tag">遊戲化學習 / RCT</span><span>Eur J Dent Educ</span><span>2026-10-08</span></div>
+<h3><a href="https://doi.org/10.1111/eje.70315" target="_blank" rel="noopener">8. Impact of Gamification on Learning Oral Mucosal Pathology Among Dental Students: A Randomized Controlled Trial.</a></h3>
+<p class="au">Bonneau A, Cann S, Louisy A, Chaux AG, Hascoët E, Lesclous P, Cloitre A</p><p>遊戲化學習常被認為能提升動機，但對知識獲得的效益仍不明確。本研究為雙組平行集群隨機對照試驗，納入 71 位五年級牙醫學生，遊戲組可使用 ORAMUC 遊戲及微學習平台 Wooflash，並以 Kirkpatrick 評估模式前三層級於課後即時（層級 1、2）與 4 個月後（層級 3）評估成效。結果顯示遊戲組在反應層級的整體滿意度（有趣、協作、動態）較高；信心與技能自評兩組皆進步，僅一項達組間差異。在學習層級，兩組前後測知識分數無顯著差異，但學生認為遊戲有助記憶；4 個月後信心與技能自評亦無組間差異。</p><p class="edu"><strong>教育意涵：</strong>遊戲化可提高學習滿意度，但未顯示額外的知識或長期成效，導入時應著重其動機價值，並設計更能檢驗臨床影響的研究。</p></article><article class="card"><div class="meta"><span class="tag">行動 App / 系統性回顧</span><span>Dent Traumatol</span><span>2026-10-08</span></div>
+<h3><a href="https://doi.org/10.1111/edt.70142" target="_blank" rel="noopener">9. Awareness and Educational Effectiveness of the ToothSOS Mobile Application for Traumatic Dental Injuries: A Systematic Review and Meta-Analysis.</a></h3>
+<p class="au">Aykanat B, Ayhan M, Özyürek H, Ayaz B</p><p>ToothSOS 是國際牙外傷學會推出的免費應用程式，提供符合指引的牙外傷急救指示，但過去缺乏專門的整合分析。本系統性回顧搜尋多個資料庫，最終納入 21 篇研究，其中 14 篇探討知曉度，共 4576 位參與者。合併分析顯示知曉度在牙科專業人員與學生為 27.1%（95% CI 13.4–47.1），非牙科醫療人員 3.1%，一般民眾僅 1.6%；整體 5.0%，異質性極高（I² = 96.5%）。三項無對照研究顯示短期知識提升，1 個月時合併標準化平均變化為 2.33（1.48–3.18），但證據確定性極低。</p><p class="edu"><strong>教育意涵：</strong>牙外傷教育 App 在非牙科族群的知曉度極低，需針對性推廣；短期知識增益不等於長期學習或實際處置改善，應追蹤臨床結果。</p></article></section><section id="cur"><h2>📚 課程、評量與教學</h2><article class="card"><div class="meta"><span class="tag">入學評量 / 手部靈巧度</span><span>Eur J Dent Educ</span><span>2026-10-04</span></div>
+<h3><a href="https://doi.org/10.1111/eje.70318" target="_blank" rel="noopener">10. Manual Dexterity Admission Tests and Pre-Clinical Performance of Dentistry Students.</a></h3>
+<p class="au">Dhillon IK, Wong ML, Sim YF, Hu S</p><p>牙醫學院入學評量常納入手部靈巧度測驗（MDT）與面試，但 MDT 能否預測術前實作表現仍不明確。新加坡國立大學牙醫學院的入學評量包含 MDT 與多站迷你面試（MMI）。本評論分析 2017 至 2022 年間 363 位學生的 MDT 成績與兒童牙科學術前技術操作的百分位標準化成績之關係。結果顯示 MDT 與術前技術分數呈顯著正相關（τ = 0.180，範圍 0.145–0.304，p &lt; 0.05），顯示 MDT 可能捕捉到與後續術前表現相關的精細動作能力，但效果量偏小。</p><p class="edu"><strong>教育意涵：</strong>MDT 不宜作為獨立的招生工具，但可與其他評量並用，作為術前訓練準備度的參考，並協助辨識需要額外支持的學生。</p></article></section><section id="well"><h2>🧠 學生身心健康與職業發展</h2><article class="card"><div class="meta"><span class="tag">職業倦怠 / 量表驗證</span><span>Work</span><span>2026-10-09</span></div>
+<h3><a href="https://doi.org/10.1177/10519815261489529" target="_blank" rel="noopener">11. Burnout among dental students: Validation of the Copenhagen Burnout Inventory.</a></h3>
+<p class="au">Bashir R, Alam BF, Wahab Khan A, Bashir S, Al-Jandan B, Ali S</p><p>牙醫學生承受高度身心壓力，可能影響學業與臨床表現。本橫斷研究於 2023 年 1 至 7 月對巴基斯坦公私立牙醫學院學生進行線上問卷，共 257 位參與者（73% 女性），以 Cronbach&#x27;s alpha 檢驗信度、因素分析檢驗建構效度，驗證哥本哈根倦怠量表（CBI）。總分平均為 54.7 ± 12.0，其中工作相關倦怠最高（21.6 ± 5.7），其次為個人倦怠（18.8 ± 4.5）與病人相關倦怠（14.1 ± 5.3），整體屬中度；最後一年臨床階段學生倦怠最高，公立學校學生的病人相關倦怠較高，性別間無明顯差異。</p><p class="edu"><strong>教育意涵：</strong>臨床實習階段是倦怠高風險期，教學單位可據此設計減壓與支持機制，並以 CBI 作為追蹤工具。</p></article><article class="card"><div class="meta"><span class="tag">社群媒體 / 學習資源</span><span>Int J Dent</span><span>2026-10-04</span></div>
+<h3><a href="https://doi.org/10.1155/ijod/5103984" target="_blank" rel="noopener">12. The Influence of Social Media on Dental Education: Dental Students&#x27; Perspectives.</a></h3>
+<p class="au">Shokrollahzadeh Behbahani H, Ghazanfari R, Aminishakib P, Hasanzade M</p><p>社群媒體已深刻改變牙醫學生的學習方式。本橫斷研究以經信效度檢驗的半結構式問卷，調查德黑蘭大學隨機抽樣的 112 位牙醫學生。結果顯示 WhatsApp 與 Telegram 的使用時間與每日使用量最高，其次為 Instagram 與 YouTube（p &lt; 0.001）；在對學業學習的影響上，YouTube、WhatsApp 與 Telegram 相當（p = 0.128），且皆顯著高於 Instagram。研究同時發現，相當比例學生不會查證網路科學內容的可信度，顯示學生普遍使用社群媒體學習，但尚未納入正式課程。</p><p class="edu"><strong>教育意涵：</strong>應在課程中納入批判性使用社群媒體與評估網路資訊可信度的訓練，並善用 YouTube 等平台提升學習品質。</p></article><article class="card"><div class="meta"><span class="tag">美學認知 / 社群媒體</span><span>Int J Dent</span><span>2026-10-09</span></div>
+<h3><a href="https://doi.org/10.1155/ijod/7428492" target="_blank" rel="noopener">13. A Comparative Evaluation of Contemporary Aesthetic Perceptions Between Dental Students and Laypersons.</a></h3>
+<p class="au">Sencan BB, Kılıclar S</p><p>微笑美學認知會影響社交互動，而社群媒體可能使審美標準更趨動態。本橫斷研究納入 242 位 18–30 歲參與者（牙醫學生 130 人、一般民眾 112 人），以 10 題線上問卷比較牙色、牙齦顯露、唇豐滿度、牙縫與暴牙偏好，並探討社群媒體影響。兩組皆偏好白牙與整齊排列；牙醫學生更偏好較少牙齦顯露，唇豐滿度與牙縫無顯著差異。社群媒體使用率達 96.6%，Instagram 最常用（80.3%），對牙醫學生的影響更大；多數人表示社群媒體會影響其美學認知。</p><p class="edu"><strong>教育意涵：</strong>牙醫學生同樣受社群媒體影響，教學中應納入美學期待的溝通訓練，使未來臨床醫師更能理解並引導病人期望。</p></article></section><section id="oth"><h2>🌐 其他重要主題</h2><article class="card"><div class="meta"><span class="tag">教育財務 / 改革共識</span><span>J Dent Educ</span><span>2026-10-09</span></div>
+<h3><a href="https://doi.org/10.1002/jdd.70400" target="_blank" rel="noopener">14. Removing Tuition Dependency From Dental Education: Consensus Recommendations on Student Debt, Sustainability, and Pathway Reform.</a></h3>
+<p class="au">Yamakami SA, Reddy MS, Johnson JT, Shazib MA, Gallagher D, Quinn B, Beneduce C, Miranda M, Park SE</p><p>美國牙醫學教育的財務模式與永續性、公平性及人力規劃日益失衡：學費上漲、畢業生負債高，並可能影響入學選擇、學生多元性與投入學術、醫院或安全網機構的職涯彈性。本文為 2026 年 6 月「重塑牙醫學教育高峰會」第二工作小組的共識建議，採結構化工作表、引導式討論與背景文獻回顧（價格敏感度、負債、投資報酬、人力趨勢）。小組達成四項共識：以能力為本並搭配有薪過渡年來縮短與重整教育路徑；建立科技賦能的共享課程與術前訓練模式；實施承諾制與「先享後付」財務模式；並更新執照、認證與法規架構以支持新路徑。</p><p class="edu"><strong>教育意涵：</strong>作者主張可負擔性問題不只是債務，更是結構設計問題；改革需調整學制、成本結構與法規，使入行取決於才能而非財力。此為共識意見，非實證試驗。</p></article><article class="card"><div class="meta"><span class="tag">口腔照護可近性 / 改革共識</span><span>J Dent Educ</span><span>2026-10-06</span></div>
+<h3><a href="https://doi.org/10.1002/jdd.70399" target="_blank" rel="noopener">15. Reimagining Dental Education: Consensus Recommendations for Improving Access to Care Through Building Capacity and Closing the Oral Health Care Gap.</a></h3>
+<p class="au">Ticku S, Farmer-Dixon CM, Hume WR, Kalenderian E, Leone CW, Lott JR, Murdoch-Kinch CA, Davis B, Feldman CA</p><p>美國數百萬人因保險碎片化、人力分布不均、社會條件及口腔與整體健康體系分離而難以取得口腔照護，牙醫學院可透過課程、臨床訓練、社區夥伴關係與機構責任協助縮小落差。在 2026 年 6 月高峰會中，六位牙醫教育領袖、兩位共同主席與一位學者以「未來回溯」會議審閱證據並凝聚共識（未正式投票，依 ACCORD 指引報告）。建議包括：與其他健康專業建立實質教學與臨床關係；強化倡議與領導力培訓，與社區、付費者及政策夥伴合作；發展永續的社區導向教育，並檢討教育年限、結構與畢業後訓練角色。</p><p class="edu"><strong>教育意涵：</strong>牙醫教育無法單獨消除照護不平等，但可培育能跨系統合作、倡議政策與測試負責任照護模式的畢業生；實行時須兼顧公平、資源、師資與認證。</p></article></section>
+<section id="refs"><h2>📖 References</h2><ol class="refs"><li>Rabelo KA, Swinckles L, Delamare E, Duan Z, Trinh E, Ma Y, Kim J, Miletic V. AI-Driven Feedback on Bitewing Radiographic Technique: A Comparative Study of Large Language Models. <em>Eur J Dent Educ</em>. 2026. DOI: <a href="https://doi.org/10.1111/eje.70325">https://doi.org/10.1111/eje.70325</a>. PMID: 42857920</li><li>Chen S, Sharma LA, An S. Evaluating the Effectiveness of Artificial Intelligence (AI)-Supported Removable Partial Denture Design Tools in Dental Education. <em>J Dent Educ</em>. 2026. DOI: <a href="https://doi.org/10.1002/jdd.70395">https://doi.org/10.1002/jdd.70395</a>. PMID: 42836484</li><li>Borckardt JJ, Henninger-Borckardt DE, Vuthiganon J, Annan-Coultas D, Langdale L, Kascak K, Hamil L. AI-Powered Virtual Patients in Health Professions Education: Learner Engagement and Knowledge Application. <em>J Dent Educ</em>. 2026. DOI: <a href="https://doi.org/10.1002/jdd.70394">https://doi.org/10.1002/jdd.70394</a>. PMID: 42831612</li><li>Garcia IM, Anagnostopoulos-King F, Melo MA, Morgan A. 3D-Printed Models to Enhance Dental Anatomy Learning: Students&#x27; Perspective. <em>J Dent Educ</em>. 2026. DOI: <a href="https://doi.org/10.1002/jdd.70402">https://doi.org/10.1002/jdd.70402</a>. PMID: 42851133</li><li>Davis T, Pagni S, Arsenault K. Aging and Disability Simulation in Dental Education: A Mixed-Methods Evaluation of Student Perceptions. <em>Eur J Dent Educ</em>. 2026. DOI: <a href="https://doi.org/10.1111/eje.70322">https://doi.org/10.1111/eje.70322</a>. PMID: 42849029</li><li>Wei M, Chang S, Liu Z, Wu T, Cao Z, Lin H, Liu Q, Shi Z, Wang L, Zhu Z. Enhancing Oral Mucosal Biopsy and Submucosal Injection Skills in Dental Students Using a Manikin-Compatible Buccal Mucosal Lesion Simulator. <em>Eur J Dent Educ</em>. 2026. DOI: <a href="https://doi.org/10.1111/eje.70320">https://doi.org/10.1111/eje.70320</a>. PMID: 42836468</li><li>Zachar J, Shetty S. Dental Students&#x27; Perceived Confidence and Preparedness Following Medical Emergency Simulation Training in Australia. <em>Eur J Dent Educ</em>. 2026. DOI: <a href="https://doi.org/10.1111/eje.70327">https://doi.org/10.1111/eje.70327</a>. PMID: 42857929</li><li>Bonneau A, Cann S, Louisy A, Chaux AG, Hascoët E, Lesclous P, Cloitre A. Impact of Gamification on Learning Oral Mucosal Pathology Among Dental Students: A Randomized Controlled Trial. <em>Eur J Dent Educ</em>. 2026. DOI: <a href="https://doi.org/10.1111/eje.70315">https://doi.org/10.1111/eje.70315</a>. PMID: 42850825</li><li>Aykanat B, Ayhan M, Özyürek H, Ayaz B. Awareness and Educational Effectiveness of the ToothSOS Mobile Application for Traumatic Dental Injuries: A Systematic Review and Meta-Analysis. <em>Dent Traumatol</em>. 2026. DOI: <a href="https://doi.org/10.1111/edt.70142">https://doi.org/10.1111/edt.70142</a>. PMID: 42850873</li><li>Dhillon IK, Wong ML, Sim YF, Hu S. Manual Dexterity Admission Tests and Pre-Clinical Performance of Dentistry Students. <em>Eur J Dent Educ</em>. 2026. DOI: <a href="https://doi.org/10.1111/eje.70318">https://doi.org/10.1111/eje.70318</a>. PMID: 42830490</li><li>Bashir R, Alam BF, Wahab Khan A, Bashir S, Al-Jandan B, Ali S. Burnout among dental students: Validation of the Copenhagen Burnout Inventory. <em>Work</em>. 2026. DOI: <a href="https://doi.org/10.1177/10519815261489529">https://doi.org/10.1177/10519815261489529</a>. PMID: 42851046</li><li>Shokrollahzadeh Behbahani H, Ghazanfari R, Aminishakib P, Hasanzade M. The Influence of Social Media on Dental Education: Dental Students&#x27; Perspectives. <em>Int J Dent</em>. 2026. DOI: <a href="https://doi.org/10.1155/ijod/5103984">https://doi.org/10.1155/ijod/5103984</a>. PMID: 42835686</li><li>Sencan BB, Kılıclar S. A Comparative Evaluation of Contemporary Aesthetic Perceptions Between Dental Students and Laypersons. <em>Int J Dent</em>. 2026. DOI: <a href="https://doi.org/10.1155/ijod/7428492">https://doi.org/10.1155/ijod/7428492</a>. PMID: 42857079</li><li>Yamakami SA, Reddy MS, Johnson JT, Shazib MA, Gallagher D, Quinn B, Beneduce C, Miranda M, Park SE. Removing Tuition Dependency From Dental Education: Consensus Recommendations on Student Debt, Sustainability, and Pathway Reform. <em>J Dent Educ</em>. 2026. DOI: <a href="https://doi.org/10.1002/jdd.70400">https://doi.org/10.1002/jdd.70400</a>. PMID: 42851147</li><li>Ticku S, Farmer-Dixon CM, Hume WR, Kalenderian E, Leone CW, Lott JR, Murdoch-Kinch CA, Davis B, Feldman CA. Reimagining Dental Education: Consensus Recommendations for Improving Access to Care Through Building Capacity and Closing the Oral Health Care Gap. <em>J Dent Educ</em>. 2026. DOI: <a href="https://doi.org/10.1002/jdd.70399">https://doi.org/10.1002/jdd.70399</a>. PMID: 42836486</li></ol></section></main>
+<footer>製作日期：2026/10/12<br>本週報由 PubMed 文獻自動彙整，內容導讀經 AI 輔助撰寫，僅供教育與研究參考。</footer></body></html>
